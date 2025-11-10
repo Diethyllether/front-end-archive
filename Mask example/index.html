@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <input type="text" name="" id="input1">
+        <div id="info1">
+            <input type="text" id="input2">
+            <input type="text" placeholder="xx.xxx-xxx" id="input3" maxlength="10" oninput="cepMask()">
+        </div>
+        <div id="info2">
+            <input type="text" placeholder="xxx.xxx.xxx-xx" id="input4" maxlength="14" oninput="cpfMask()">
+            <input type="text" placeholder="(xx) x xxxx-xxxx" id="input5" maxlength="16" oninput="telMask()">
+            <input type="text" placeholder="XX.XXX.XXX/0001-XX" id="input6" maxlength="18" oninput="cnpjMask()">
+            <input type="text" placeholder="xx_xx//xxx-xxx.9.xxx" id="input7" maxlength="21" oninput="cdgMask()">
+        </div>
+        <button id="envio" onclick="envio()">Enviar</button>
+    </main>
+</body>
+
+</html>
