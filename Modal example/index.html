@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html#">
+            <button>Início</button>
+        </a>
+        <a href="pag2.html">
+            <button>Sobre</button>
+        </a>
+        <a href="pag2.html">
+            <button>Projetos</button>
+        </a>
+        <a href="pag2.html">
+            <button>Serviços</button>
+        </a>
+        <a href="pag2.html">
+            <button>Contato</button>
+        </a>
+
+        <button onclick="trocarTema(sessionStorage.getItem('tema'))">Alternar Tema</button>
+    </header>
+    <main>
+        <h1>Projetos</h1>
+        <section>
+            <div class="card" onclick="modal(1)">
+                <h1>Projeto 1</h1>
+                <p>Lorem Ipsum dolor sit amet</p>
+            </div>
+            <div class="card" onclick="modal(2)">
+                <h1>Projeto 2</h1>
+                <p>Lorem Ipsum dolor sit amet</p>
+            </div>
+            <div class="card" onclick="modal(3)">
+                <h1>Projeto 3</h1>
+                <p>Lorem Ipsum dolor sit amet</p>
+            </div>
+            <div class="card" onclick="modal(4)">
+                <h1>Projeto 4</h1>
+                <p>Lorem Ipsum dolor sit amet</p>
+            </div>
+            <div class="card" onclick="modal(5)">
+                <h1>Projeto 5</h1>
+                <p>Lorem Ipsum dolor sit amet</p>
+            </div>
+            <div class="card" onclick="modal(6)">
+                <h1>Projeto 6</h1>
+                <p>Lorem Ipsum dolor sit amet</p>
+            </div>
+            <div class="card" onclick="modal(7)">
+                <h1>Projeto 7</h1>
+                <p>Lorem Ipsum dolor sit amet</p>
+            </div>
+            <div class="card" onclick="modal(8)">
+                <h1>Projeto 8</h1>
+                <p>Lorem Ipsum dolor sit amet</p>
+            </div>
+
+            <div id="modal">
+                <div id="modal-content">
+                    <h1>Projeto X</h1>
+
+                    <div id="info1">
+                        <input type="text" placeholder="Nome" id="input2">
+                        <input type="text" placeholder="Endereço" id="input3">
+                    </div>
+                    <div id="info2">
+                        <input type="text" placeholder="Telefone" id="input5" maxlength="16" oninput="telMask()">
+                        <input type="text" placeholder="CPF" id="input4" maxlength="14" oninput="cpfMask()">
+                        <input type="text" placeholder="Idade" id="input6" oninput="cnpjMask()">
+                        <input type="text" placeholder="CNPJ" id="input7" maxlength="21" oninput="rgMask()">
+                    </div>
+                    <button id="envio" onclick="envio()">Enviar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        © 2025 Meu Portfólio. Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>

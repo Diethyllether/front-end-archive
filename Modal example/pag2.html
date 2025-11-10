@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="modal-content">
+        <h1>Projeto</h1>
+
+        <div id="info1">
+            <input type="text" placeholder="Nome" id="input2">
+            <input type="text" placeholder="Endereço" id="input3">
+        </div>
+        <div id="info2">
+            <input type="text" placeholder="Telefone" id="input5" maxlength="16" oninput="telMask()">
+            <input type="text" placeholder="CPF" id="input4" maxlength="14" oninput="cpfMask()">
+            <input type="text" placeholder="Idade" id="input6" oninput="cnpjMask()">
+            <input type="text" placeholder="CNPJ" id="input7" maxlength="21" oninput="rgMask()">
+        </div>
+        <button id="envio" onclick="envio()">Enviar</button>
+    </div>
+</body>
+
+</html>
+
+
+<script>
+    addEventListener("DOMContentLoaded", () => {
+        const nome = document.getElementById("input2");
+        const endereco = document.getElementById("input3");
+        const cpf = document.getElementById("input4");
+        const tel = document.getElementById("input5");
+        const idade = document.getElementById("input6");
+        const rg = document.getElementById("input7");
+
+        nome.value = localStorage.getItem("nome");
+        endereco.value = localStorage.getItem("endereco");
+        cpf.value = localStorage.getItem("cpf");
+        tel.value = localStorage.getItem("telefone");
+        idade.value = localStorage.getItem("idade");
+        rg.value = localStorage.getItem("rg");
+    })
+</script>
